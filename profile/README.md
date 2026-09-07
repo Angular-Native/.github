@@ -3,7 +3,7 @@
   <h1>Angular Native</h1>
   <p><strong>Angular on real native views, with the core in Rust.</strong></p>
   <p>
-    <a href="https://angular-native.dev">Documentation</a> ·
+    <a href="https://angular-native.github.io">Documentation</a> ·
     <a href="https://github.com/Angular-Native/angular-native">Source</a> ·
     <a href="https://github.com/Angular-Native/angular-native/discussions">Discussions</a>
   </p>
@@ -32,6 +32,7 @@ scrolling and the system look come free, because the system drew them.
 | Repository | What it is |
 |---|---|
 | [`angular-native`](https://github.com/Angular-Native/angular-native) | The monorepo: the Rust core, the eight hosts, the npm packages, the CLI, the examples and the docs site |
+| [`Angular-Native.github.io`](https://github.com/Angular-Native/Angular-Native.github.io) | The built site, pushed here by the monorepo. Output only — the source is `docs-site/` |
 | [`.github`](https://github.com/Angular-Native/.github) | This profile and the shared community health files |
 
 It is one repository on purpose. The Rust crates and the npm packages ship as a
