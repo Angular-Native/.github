@@ -1,0 +1,68 @@
+name: Bug report
+description: Something behaves differently from what the docs or the code claim.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An unrecognised prop or primitive name fails *silently* — it simply does
+        nothing. If that is the shape of your problem, running the matching
+        check script (`check-kinds.sh`, `check-styles.sh`, `check-wrapper.sh`)
+        will usually name the missing link faster than an issue will.
+
+  - type: textarea
+    id: what-happens
+    attributes:
+      label: What happens
+      description: And what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: |
+        The smallest template or component that shows it. If it reproduces
+        without a device, the headless output is the most useful thing you can
+        paste:
+
+        ```
+        cargo an build <app>
+        cargo run -p an-bridge --example headless -- build/bundle/<app>/main.js 6
+        ```
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms it happens on
+      options:
+        - label: iOS
+        - label: Android
+        - label: macOS
+        - label: tvOS
+        - label: visionOS
+        - label: watchOS
+        - label: Wear OS
+        - label: headless (no device involved)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The `an` version or the commit you are on, plus your OS and Rust toolchain.
+      placeholder: "an 0.0.1 · macOS 15.6 · rustc 1.9x stable"
+    validations:
+      required: true
+
+  - type: textarea
+    id: checks
+    attributes:
+      label: What `./scripts/check-all.sh` says
+      description: Optional, but a failing or `skipped` line here often is the answer.
+      render: text
