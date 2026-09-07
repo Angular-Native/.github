@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or idea
+    url: https://github.com/Angular-Native/angular-native/discussions
+    about: Anything that is not a bug or a concrete proposal starts here.
+  - name: Documentation
+    url: https://angular-native.dev
+    about: The guides, the reference and the platform notes.
+  - name: Report a vulnerability
+    url: https://github.com/Angular-Native/angular-native/security/advisories/new
+    about: Privately, never as a public issue.
