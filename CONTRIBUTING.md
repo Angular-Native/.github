@@ -33,6 +33,12 @@ primitive or a prop means touching every link:
   `scripts/check-styles.sh`.
 - **Props reaching every host** — a directive prop must be read by every host
   crate, not just the one you tested on. Guarded by `scripts/check-wrapper.sh`.
+- **The site's address** — `DOCS_URL` at the root is the one place it is
+  decided. Astro reads that file; the README's links, the `homepage` of every
+  npm package and the URLs inside the CLI's error strings are written out
+  because they cannot share a variable. Guarded by
+  `scripts/check-docs-url.sh`, which rewrites all of them with `--fix`. Never
+  edit one of those links by hand.
 
 Run the relevant check script directly; it is much faster than finding out on a
 device.
