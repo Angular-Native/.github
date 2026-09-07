@@ -1,0 +1,50 @@
+name: Proposal
+description: A primitive, a prop, a platform behaviour or an API that should exist.
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open-ended ideas belong in
+        [Discussions](https://github.com/Angular-Native/angular-native/discussions).
+        This form is for a proposal concrete enough to argue about.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you cannot express today, and what you do instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: The proposal
+      description: |
+        The template or the API as you would write it. For a new primitive, say
+        which native control it *is* on each platform — that mapping is the
+        argument, not an implementation detail.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: platforms
+    attributes:
+      label: What it maps to per platform
+      description: |
+        UIKit / android.view / AppKit / SwiftUI. Where there is no system
+        control, say so — a primitive that has to be drawn is a different
+        decision from one that already exists.
+      placeholder: |
+        iOS:     UISwitch
+        Android: MaterialSwitch
+        macOS:   NSSwitch
+        watchOS: SwiftUI Toggle
+
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Does it argue with a line in README's "Decisions"?
+      description: If it does, name the line. That is where the discussion will be.
